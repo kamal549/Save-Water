@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<style>
+.water{    width: 43px;
+    position: absolute;
+        left: 215px;
+    top: 163px;
+   
+   
+   
+}
+
+.tap-handle{-ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(20deg);
+	z-index: 9999;/* Standard syntax */}
+
+.tap{position: absolute;
+    top: 109px;
+    left: 12px;}
+</style>
+<body>
+<img id="tap-handle" src="tap-handle.png" />
+<img class="tap"  src="tap-bottom.png" />
+
+<div class="water"><img style="width:75px;" src="water.png" /> </div>
+</body>
+<script src="jquery-1.4.1.js"></script>
+<script src="ui.js"></script>
+
+<script>
+$(document).ready(function() {
+						   $( "#tap-handle").draggable();
+				$(".water").hide();	
+				$("#tap-handle").click(function() {
+												
+												$(this).toggleClass("tap-handle");
+										 
+										 
+									$(".water").slideToggle('fast');	
+									
+									
+										 
+										 });
+				
+				
+						   
+						   });
+
+</script>
+</html>
